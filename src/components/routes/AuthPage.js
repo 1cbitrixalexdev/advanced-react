@@ -7,11 +7,6 @@ import {signUp, moduleName} from '../../ducks/auth'
 import Loader from '../common/Loader'
 
 class AuthPage extends Component {
-    static defaultProps = {};
-
-    static propTypes = {};
-
-    state = {};
 
     render() {
         const {loading} = this.props

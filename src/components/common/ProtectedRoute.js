@@ -5,11 +5,6 @@ import {moduleName} from '../../ducks/auth'
 import UnAuthorized from './UnAuthorized'
 
 class ProtectedRoute extends Component {
-    static defaultProps = {};
-
-    static propTypes = {};
-
-    state = {};
 
     render() {
         const {component, ...rest} = this.props
@@ -24,4 +19,4 @@ class ProtectedRoute extends Component {
 
 export default connect(state => ({
     authorized: !!state[moduleName].user
-}))(ProtectedRoute);
+}), null, null, {pure: false})(ProtectedRoute);
